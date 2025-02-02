@@ -7,8 +7,8 @@ public class Dharahara {
     public Dharahara(int rings) {
         this.rings = rings;
         gameState = new int[this.rings][3*((2 * this.rings) - 1) - 2]; //TODO: Find out the right size
-        initializeAsteriks();
         initializeRings();
+        initializePipes();
     }
 
     private void initializeRings() {
