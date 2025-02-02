@@ -22,7 +22,7 @@ public class Dharahara {
     }
 
     private void initializePipes() {
-        int offset = 3*this.rings - 2;;
+        int offset = 3*this.rings - 2;
         for (int row = 0; row < rings; row +=1){
             gameState[row][offset] = -1;
             gameState[row][2*offset-2] = -1;
@@ -32,8 +32,8 @@ public class Dharahara {
     public String toString() {
         StringBuilder tower = new StringBuilder();
 
-        for (int row = 0; row < rings; row++) {
-            for (int col = 0; col < gameState[row].length; col++) {
+        for (int row = 0; row < rings; row+=1) {
+            for (int col = 0; col < gameState[row].length; col+=1) {
                 if (gameState[row][col] == 1) {
                     tower.append("▄");
                 } else if (gameState[row][col] == -1) {
