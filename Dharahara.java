@@ -8,15 +8,15 @@ public class Dharahara {
         this.rings = rings;
         gameState = new int[this.rings][3*((2 * this.rings) - 1) - 2]; //TODO: Find out the right size
         initializeAsteriks();
-        initializePipes();
+        initializeRings();
     }
 
-    private void initializeAsteriks() {
+    private void initializeRings() {
         for (int row = 0; row < rings; row += 1) {
-            int asteriskEndIndex = 2 * (row + 1) - 1;
-            int asteriskStartIndex = (rings - 1) - row;
-            for (int col = 0; col < asteriskEndIndex; col += 1) {
-                gameState[row][asteriskStartIndex + col] = 1;
+            int ringsEndIndex = 2 * (row + 1) - 1;
+            int ringsStartIndex = (rings - 1) - row;
+            for (int col = 0; col < ringsEndIndex; col += 1) {
+                gameState[row][ringsStartIndex + col] = 1;
             }
         }
     }
